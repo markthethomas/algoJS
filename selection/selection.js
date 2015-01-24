@@ -8,8 +8,8 @@ function selectionSort(array) {
 
   for (var i = 0; i < array.length; i++) {
     min = i;
-    //    j is initliazed to be i+1 to check if it's the same as i
-    //       V    V
+    //   After each pass, the items at the beginning of the array are already in their correct spots and so there is no need to re-evaluate them. setting j to i also works (won't break everything), but isn't necessary.
+    //       V   V V
     for (var j = i+1; j < length ; j++) {
       // Check if the array at index j (which is i+1) is the same as the min set
       if(array[j] < array[min]) {
@@ -26,3 +26,4 @@ function selectionSort(array) {
 }
 // Example
 // selectionSort(array);
+//console.log(selectionSort(array));
